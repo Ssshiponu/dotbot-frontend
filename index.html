@@ -9,8 +9,8 @@
     <!-- Primary SEO Meta Tags -->
     <title>DotBot - Automate Your Facebook Sales with AI | 24/7 Messenger Automation</title>
     <meta name="description" content="Transform your Facebook business with DotBot's AI sales automation. Capture orders 24/7, handle customer inquiries instantly, and boost sales with intelligent Messenger chatbot. No monthly fees, lifetime license.">
-    <meta name="keywords" content="Facebook sales automation, AI chatbot Bangladesh, Messenger automation, F-commerce automation, AI sales assistant, Facebook business automation, chatbot for sales, automated customer service">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="keywords" content="Facebook sales automation, AI messanger chatbot, Messenger automation bot, F-commerce automation, AI sales assistant, Facebook business automation, chatbot for sales, automated customer service">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="DotBot">
     <meta name="language" content="English">
     <meta name="geo.region" content="BD">
@@ -50,18 +50,18 @@
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Terms and Conditions - DotBot",
-        "description": "DotBot AI sales automation services",
+        "name": "DotBot AI - Hompage",
+        "description": "DotBot AI - AI Messanger automation services",
         "url": "https://dotbotai.netlify.app",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "DotBot",
+            "name": "DotBot AI",
             "url": "https://dotbotai.netlify.app"
         },
         "about": {
             "@type": "Organization",
-            "name": "DotBot",
-            "description": "AI-powered sales automation for Facebook Messenger"
+            "name": "DotBot AI",
+            "description": "AI-powered automation for Facebook Messenger"
         }
     }
     </script>
@@ -79,14 +79,39 @@
                     fontFamily: {
                         'heading': ['Poppins', 'sans-serif'],
                         'body': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.4s',
+                        'fade-out': 'fadeOut 0.4s'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        fadeOut: {
+                            '0%': { opacity: '1' },
+                            '100%': { opacity: '0' }
+                        }
                     }
                 }
             }
         }
+
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="font-body text-gray-900 antialiased">
+    <!-- Demo video modal -->
+    <div class="fixed inset-0 z-50 flex items-center justify-center hidden" id="demo-modal">
+        <div class="fixed inset-0 bg-black opacity-50 backdrop-blur-sm"></div>
+        <div class="bg-primary-light p-4 rounded-xl shadow-lg z-50">
+            <div class="overflow-hidden rounded-lg w-[256px] h-[356px]">
+                <video src="src/demo.mp4" controls class="h-full object-cover"></video>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="w-full" id="navbar">
         <div class="w-full max-w-7xl mx-auto bg-white">
@@ -96,9 +121,9 @@
                         <img src="src/dotbot_logo_512.png" alt="DotBot Logo" class="w-10 h-10">
                         <span class="font-heading font-semibold text-xl text-gray-900">DotBot</span>
                     </div>
-                    <a href="https://facebook.com/dotshirtt" target="_blank" class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-colors">
+                    <button id="demo-modal-trigger" class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-colors">
                         See Demo
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -284,7 +309,7 @@
             
             <div class="bg-white rounded-3xl border-2 border-gray-100 hover:border-primary transition-colors p-8 md:p-12 max-w-lg mx-auto">
                 <div class="mb-8">
-                    <h3 class="font-heading font-bold text-2xl mb-4">DotBot Full Setup Package</h3>
+                    <h3 class="font-heading font-semibold text-2xl mb-4">DotBot Full Setup Package</h3>
                     <div class="flex items-center justify-center space-x-4 mb-6">
                         <span class="text-2xl text-gray-400 line-through">৳4,200</span>
                         <span class="text-5xl font-bold text-primary">৳2,100</span>
@@ -326,7 +351,8 @@
                     </div>
                 </div>
                 
-                <a href="https://facebook.com/dotbotai" target="_blank" class="w-full bg-primary hover:bg-primary-dark text-white py-4 px-12 rounded-full font-semibold text-lg transition-all">
+                <a href="tel:+8801945262605" class="w-full bg-primary hover:bg-primary-dark text-white py-4 px-12 rounded-full font-semibold text-lg transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline-block fill-current" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z"/></svg>
                     Get Started
                 </a>
             </div>
@@ -436,6 +462,29 @@
             });
         });
 
+        // Demo modal functionality
+        const demoBtn = document.getElementById('demo-modal-trigger');
+        const demoModal = document.getElementById('demo-modal');
+
+        // Show modal with fade-in animation
+        demoBtn.addEventListener('click', () => {
+            demoModal.classList.remove('hidden');
+            demoModal.classList.add('animate-fade-in');
+            setTimeout(() => {
+            demoModal.classList.remove('animate-fade-in');
+            }, 400);
+        });
+
+        // Close modal with fade-out animation
+        demoModal.addEventListener('click', (e) => {
+            if (e.target === demoModal || e.target.classList.contains('backdrop-blur-sm')) {
+            demoModal.classList.add('animate-fade-out');
+            setTimeout(() => {
+                demoModal.classList.add('hidden');
+                demoModal.classList.remove('animate-fade-out');
+            }, 400);
+            }
+        });
     </script>
 </body>
 </html>
