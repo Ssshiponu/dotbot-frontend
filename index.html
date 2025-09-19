@@ -74,6 +74,13 @@
     <script>
         tailwind.config = {
             theme: {
+                screens: {
+                    'xs': '380px',
+                    'sm': '640px',
+                    'md': '768px',
+                    'lg': '1024px',
+                    'xl': '1280px',
+                },
                 extend: {
                     colors: {
                         primary: '#6FC276',
@@ -123,7 +130,7 @@
                 <div class="flex justify-between items-center h-20">
                     <div class="flex items-center space-x-2">
                         <img src="src/logo_512.png" alt="Bikroy Autopilot Logo" class="w-10 h-10">
-                        <span class="font-heading font-bold text-xl text-gray-900">Bikroy Autopilot</span>
+                        <span class="font-heading font-bold text-xl xs:text-2xl sm:text-[28px] text-gray-900 leading-none">Bikroy Autopilot</span>
                     </div>
                     <button id="demo-modal-trigger" class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-colors">
                         Demo
